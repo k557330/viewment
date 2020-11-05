@@ -1,20 +1,18 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React from 'react'
+import useSelectAll from './hooks/useSelectAll';
 
 const App = () => {
-  const [host, setHost] = useState([])
+  const [host, setHost] = useSelectAll("test");
 
-  const getHost = async() => {
-    const response = await axios.get('/api/test')
-    console.log(response)
-    setHost(response.data)
-  }
 
-  useEffect(() => {
-    getHost()
-  }, [])
+  // useEffect(()=>setHost("test"), [setHost])
 
-  return <>{console.log(host)}</>
+  return (
+    <>
+      {console.log("host :", host)}
+      <div onClick={setHost}>API TEST</div>
+    </>
+  )
 }
 
 export default App

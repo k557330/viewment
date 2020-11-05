@@ -3,12 +3,12 @@ const app = express()
 const PORT = process.env.PORT || 4000
 const db = require('./config/db')
 
-app.get('/api/host', (req, res) => {
-    res.send({ host: 'Response Complete' })
+app.listen(PORT, () => {
+    console.log(`Server On : http://localhost:${PORT}/`)
 })
 
-app.get('/api/test', (req, res) => {
-    db.query("select * from test", (err, data) => {
+app.get('/api/:table', (req, res) => {
+    db.query(`select * from ${req.params.table}`, (err, data) => {
         if(!err) {
             res.send(data);
 
@@ -17,8 +17,4 @@ app.get('/api/test', (req, res) => {
             res.send(err);
         }
     })
-})
-
-app.listen(PORT, () => {
-    console.log(`Server On : http://localhost:${PORT}/`)
 })
