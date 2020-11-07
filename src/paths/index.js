@@ -1,6 +1,5 @@
 const Paths = {
-    index: '/',
-    option: '/option'
+    index: '/'
 }
 
 export default Paths
