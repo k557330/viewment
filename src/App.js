@@ -1,17 +1,18 @@
 import React from 'react'
-import useSelectAll from './hooks/useSelectAll';
+import { Route } from 'react-router-dom'
+
+import MainPage from './pages/MainPage'
+
+import Paths from './paths'
+
+import './static/scss/App.scss'
+import './static/scss/Menu.scss'
+import './static/scss/Option.scss'
+import './static/scss/Prediction.scss'
 
 const App = () => {
-  const [test, setTest] = useSelectAll("test");
-
-
-  // useEffect(()=>setHost("test"), [setHost])
-
   return (
-    <>
-      {console.log(test)}
-      <div onClick={setTest}>API TEST</div>
-    </>
+    <Route path={Paths.index} component={MainPage} />
   )
 }
 

@@ -1,0 +1,57 @@
+.option-wrap{
+    text-align: center;
+    padding-bottom: 300px;
+
+    .option-title{
+        color: #17A4F9;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 50px;
+        text-transform: capitalize;
+    }
+
+    .option-content{
+        position: relative;
+        margin-bottom: 100px;
+
+        .list-wrap{
+            margin: 0 auto;
+            width: 400px;
+            margin-bottom: 100px;
+            font-size: 16px;
+            font-weight: bold;
+
+            .accordion{
+                background: #DADEE6;
+
+                &:nth-child(even){
+                    background: #EDF2F6;
+                }
+
+                .accordion-title{
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #3F4C5F;
+                }
+
+                .accordion-content{
+                    background: #F7FBFC;
+                    padding: 0;
+
+                    .accordion-btn{
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: #3F4C5F;
+                        width: 400px;
+                        padding: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .chart-wrap{
+        width: 1000px;
+        margin: 0 auto;
+    }
+}

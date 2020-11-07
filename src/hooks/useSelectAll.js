@@ -2,7 +2,7 @@ import { useCallback, useState } from 'react'
 import { callSelectAll } from '../api/db'
 
 const useSelectAll = (table) => {
-    const [selectAll, setSelectAll] = useState('')
+    const [selectAll, setSelectAll] = useState([])
     
     const selectFromDB = useCallback(() => {
         const requestSelectAll = async () => {
