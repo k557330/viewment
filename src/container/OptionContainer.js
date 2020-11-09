@@ -1,8 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 import useSelectAll from '../hooks/useSelectAll'
 
 import OptionItem from '../components/OptionItem'
+
+import { getKind } from '../store/option'
 
 const OptionContainer = ({ match }) => {
     const tableName = String(match.path).split('/')
@@ -10,19 +13,20 @@ const OptionContainer = ({ match }) => {
     const [subMenu, setSubMenu] = useSelectAll(tableName[1])
 
     const [category, setCategory] = useState("품목")
-    const [kind, setKind] = useState("품종")
-    const [rank, setRank] = useState("등급")
-
     const categoryArray = []
-    const kindArray = []
+
+    const [kind, setKind] = useState("품종")
+    const kindArray = useSelector((state) => state.option.kind)
+
+    const dispatch = useDispatch();
 
     const selectCategory = useCallback((option) => {
         setCategory(option)
+        setKind("품종")
+
         const currentIndex = subMenu.findIndex(item => item.name === option)
-        const splitToKind = subMenu[currentIndex].option.split(',')
-        
-        console.log(splitToKind, splitToKind[0].substr(1))
-    }, [setCategory, subMenu])
+        dispatch(getKind(subMenu[currentIndex].option.split(',')))
+    }, [setCategory, subMenu, dispatch])
 
     useEffect(() => {
         setSubMenu()
@@ -34,8 +38,11 @@ const OptionContainer = ({ match }) => {
             <div className="option-title"></div>
             <div className="option-content">
                 <div className="list-wrap">
+                    
                     {subMenu.forEach(item => categoryArray.push(item.name))}
+
                     <OptionItem dataSet={categoryArray} option={category} setOption={selectCategory} />
+                    <OptionItem dataSet={kindArray} option={kind} setOption={setKind} />
                 </div>
             </div>
 

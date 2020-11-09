@@ -3,10 +3,12 @@ import { all } from 'redux-saga/effects'
 
 import loading from './loading'
 import menu, { menuSaga } from './menu'
+import option from './option'
 
 const rootReducer = combineReducers({
     loading,
-    menu
+    menu,
+    option
 })
 
 export function* rootSaga() {
