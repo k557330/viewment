@@ -11,7 +11,7 @@ const MenuContainer = () => {
             <div className="menu-title">Menu</div>
             <div className="menu-content">
                 {menu.map(item => 
-                    <MenuItem item={item} key={item.id} />    
+                    <MenuItem item={item} key={item.id} />
                 )}
             </div>
         </div>

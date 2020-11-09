@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import useSelectAll from '../hooks/useSelectAll'
 
+import ChartContainer from './ChartContainer'
+
 import OptionItem from '../components/OptionItem'
 
 import { getKind } from '../store/option'
@@ -32,13 +34,22 @@ const OptionContainer = ({ match }) => {
         setSubMenu()
     }, [setSubMenu])
 
+    const [drawChart, setDrawChart] = useState(false)
+    const [chartName, setChartName] = useState('')
+    useEffect(() => {
+        if(category !== "품목" && kind !== "품종") {
+            setDrawChart(true)
+            setChartName(kind + category)
+        }
+        else setDrawChart(false)
+    }, [category, kind])
 
     return (
         <div className="option-wrap">
             <div className="option-title"></div>
             <div className="option-content">
                 <div className="list-wrap">
-                    
+
                     {subMenu.forEach(item => categoryArray.push(item.name))}
 
                     <OptionItem dataSet={categoryArray} option={category} setOption={selectCategory} />
@@ -47,7 +58,7 @@ const OptionContainer = ({ match }) => {
             </div>
 
             <div className="chart-wrap">
-
+                {drawChart && <ChartContainer chartName={chartName} />}
             </div>
         </div>
     )
