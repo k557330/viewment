@@ -18,4 +18,4 @@ const MenuContainer = () => {
     )
 }
 
-export default MenuContainer
+export default React.memo(MenuContainer)

@@ -46,7 +46,6 @@ const OptionContainer = ({ match }) => {
 
     return (
         <div className="option-wrap">
-            <div className="option-title"></div>
             <div className="option-content">
                 <div className="list-wrap">
 
@@ -64,4 +63,4 @@ const OptionContainer = ({ match }) => {
     )
 }
 
-export default OptionContainer
+export default React.memo(OptionContainer)

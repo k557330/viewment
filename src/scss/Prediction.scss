@@ -1,111 +1,66 @@
-.PredictWrap{
-    // padding-top: 300px;
-    background: #F7FBFC;
-    .predict-title {
-        padding: 300px 0 200px 0;
-        text-align: center;
+.prediction-wrap{
+    text-align: center;
+    background-color: #F7FBFC;
+    padding-bottom: 100px;
+
+    .prediction-title{
         color: #17A4F9;
         font-size: 40px;
         font-weight: bold;
-    }
-    .trend{
-        width: 1250px;
-        background: #EDF2F6;
-        margin: 0 auto;
-        padding: 0 114px 100px 25px;
+        padding-top: 200px;
         margin-bottom: 100px;
-        .trend-title{
-            color: #17A4F9;
-            text-align: center;
-            font-size: 30px;
-            font-weight: bold;
-            padding: 50px 0 75px 0;
-        }
-        .trend-content {
-            // display: table;
-            .trend-graph{
-                display: inline-block;
-                // display: table-cell;
-                width: 600px;
-                height: 600px;
-            }
-            .trend-comment{
-                display: inline-block;
-                text-align: center;
-                padding: 0 0 0 94px;
-                width: 506px;
-                transform: translateY(-150px);
-                .title{
-                color: #17A4F9;
-                font-size: 30px;
-                font-weight: bold;
-                // padding-bottom: 60px;
-                }
-                .text{
-                    font-size: 30px;
-                    font-weight: bold;
-                    color: #3F4C5F;
-                    padding-top: 60px;
-                }
-            }
-        }
     }
-    .average{
-        width: 1250px;
-        background: #EDF2F6;
-        margin: 0 auto;
-        padding-left: 67px;
-        padding-bottom: 100px;
-        .average-title{
-            color: #17A4F9;
-            text-align: center;
-            font-size: 30px;
-            font-weight: bold;
-            padding: 50px 0 75px 0;
-        }
-        .average-content {
-            .average-graph{
-                display: inline-block;
-                width: 600px;
-                height: 600px;
-                padding-left: 30px;
-            }
-            .average-comment{
-                transform: translateY(-130px);
-                text-align: center;
-                width: 520px;
-                display: inline-block;
-                text-align: center;
-                padding-right: 43px;
-                .title{
-                color: #17A4F9;
-                font-size: 30px;
-                font-weight: bold;
-                }
-                .text{
-                    font-size: 30px;
-                    font-weight: bold;
-                    color: #3F4C5F;
-                    padding-top: 60px;
-                }
-            }
-        }
-    }
-}
+    
+    .prediction-container{
+        background-color: #EDF2F6;
+        padding-bottom: 50px;
+        width: calc(100% - 48px);
+        margin: 0 auto 100px;
 
-.More{
-    position: relative;
-    padding: 200px 0;
-    margin: 0 auto;
-    button{
-        position: relative;
-        text-align: center;
-        width: 647px;
-        height: 167px;
-        transform: translateX(+50%);
-        background: white;
-        font-size: 30px;
-        font-weight: bold;
-        color: #3F4C5F;
+        .prediction-container-title{
+            padding-top: 50px;
+            margin-bottom: 75px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #17A4F9;
+        }
+
+        .prediction-content-wrap{
+            width: 100%;
+            height: 440px;
+
+            & > img{
+                display: inline-block;
+                width: 440px;
+            }
+
+            .prediction-content-container{
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                width: 440px;
+                height: 100%;
+
+                .prediction-content{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    .prediction-content-title{
+                        color: #17A4F9;
+                        font-size: 20px;
+                        font-weight: bold;
+                        margin-bottom: 50px;
+                    }
+
+                    .prediction-content-text{
+                        color: #3F4C5F;
+                        margin-bottom: 50px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
     }
 }

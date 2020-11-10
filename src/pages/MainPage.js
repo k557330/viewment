@@ -14,11 +14,13 @@ const MainPage = () => {
     const menu = useSelector((state) => state.menu.menu)
     const dispatch = useDispatch()
 
-    useEffect(() => {dispatch(getMenu())}, [dispatch])
+    useEffect(() => {
+        dispatch(getMenu())
+    }, [dispatch])
 
     return (
         <>
-            <div className="main-image"><img src={`${process.env.PUBLIC_URL}/images/main_image.png`} alt="" /></div>
+            <div className="main-image"><img src={`${process.env.PUBLIC_URL}/images/background_image.png`} alt="" /></div>
             <div className="main-logo w-centering"><img src={`${process.env.PUBLIC_URL}/images/logo_white.png`} alt="" /></div>
             <div className="main-since w-centering">since 2020.09.09</div>
 

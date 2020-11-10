@@ -17,4 +17,4 @@ const MenuItem = ({ item }) => {
     )
 }
 
-export default MenuItem
+export default React.memo(MenuItem)
