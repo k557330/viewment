@@ -19,7 +19,7 @@ const ChartContainer = ({ chartName }) => {
         <>
             {Array.isArray(chartData)
             ?   <DrawChart chartData={chartData} />
-            :   <div>not found</div>
+            :   <div>NOT FOUND</div>
             }
         </>
     )

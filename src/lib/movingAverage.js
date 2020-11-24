@@ -8,5 +8,5 @@ export const movingAverage = (chartData) => {
         func.push(tmp / (i + 1))
     }
 
-    return func.slice(func.length - 365)
+    return func.slice(func.length - 30)
 }

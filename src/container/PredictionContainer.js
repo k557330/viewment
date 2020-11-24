@@ -26,7 +26,7 @@ const PredictionContainer = () => {
             </div>
 
             <div className="prediction-container">
-                <div className="prediction-container-title">누적 평균 보기</div>
+                <div className="prediction-container-title">이동 평균 보기</div>
                 <div className="prediction-content-wrap">
                     <div className="prediction-content-container">
                         <div className="prediction-content">
@@ -38,7 +38,7 @@ const PredictionContainer = () => {
                             <div className="prediction-content-text">
                                 이동평균선보다 가격이<br />
                                 높게 돼 있으므로<br />
-                                가격이 오를 확률니 높습니다.
+                                가격이 오를 확률이 높습니다.
                             </div>
                         </div>
                     </div>

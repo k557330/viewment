@@ -15,8 +15,8 @@ export const leastSquares = (chartData) => {
 
     let func = []
     for (let i = 0; i < chartData.length; i++) {
-        func.push(a * (i + 1) * + b)
+        func.push((a * (i + 1) * + b) / 3)
     }
 
-    return func.slice(func.length - 365)
+    return func.slice(func.length - 30)
 }
