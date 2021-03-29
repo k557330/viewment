@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Viewment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    Facebook Prophet 예측 모델을 사용해 미래 5일의 가격을 예측하는 리액트 웹 서비스
 
-## Available Scripts
+## 개요
 
-In the project directory, you can run:
+1. 테이블의 데이터에서 Facebook Prophet 모델을 이용해 예측
+2. 예측값을 그 테이블에 저장
+3. 웹에서 선택한 품목에 해당하는 테이블 순회
+4. 데이터의 일부를 이용해 경향을 그리는 그래프 표시
+5. 날짜-가격 및 경향 차트로 표현
 
-### `yarn start`
+<img src="./capture.png" width="100%">
+<img src="./outline.png" width="100%">
+<img src="./chart.png" width="100%">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    서버사이드렌더링(Express, Webpack) - CORS에러(MySQL의 테이블 접근) 해결
+    인공지능 프로젝트는 리포지토리에 포함되어 있지 않음
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 기술 스택
 
-### `yarn test`
+-   인공지능
+    -   Facebook Prophet
+    -   Arima (비교)
+-   웹
+    -   ES6
+    -   React
+    -   Express
+    -   Webpack
+    -   Redux
+    -   Chart.js
+    -   SCSS
+-   DB
+    -   MySQL
+-   기타
+    -   R Studio(데이터 결측치 대체)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 개발 인원 · 역할 · 기간
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   팀원 3명
+-   역할
+    -   인공지능 - 0%
+    -   퍼블리싱 - 10%(약간의 수정)
+    -   웹 파트 기능 - 100%
+-   2개월 작업
